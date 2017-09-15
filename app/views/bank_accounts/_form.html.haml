@@ -1,0 +1,16 @@
+= form_for @bank_account do |f|
+  -# creates a div (haml's default) with class of field:
+  .field
+    = f.label :institution
+    = f.text_field :institution, placeholder: 'Chase'
+  .field
+    = f.label :description
+    = f.text_field :description, placeholder: 'Your Description'
+  .field
+    = f.label :amount
+    = f.number_field :amount
+  .field
+    = f.label :active
+    = f.number_field :active
+  .field
+    = f.submit id: "submit-button"
